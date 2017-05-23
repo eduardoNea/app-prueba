@@ -1,0 +1,21 @@
+{
+	"data": [
+		{
+			"IdMeeting": [
+				"0234"
+			],
+			"NombreCandidato": [
+				"Eduardo Rodriguez Neáves"
+			],
+			"FechaEjecucion": [
+				"05/25/2017"
+			],
+			"ResultadoEvaluacion": [
+				"2"
+			],
+			"LinkHistorico": [
+				"link"
+			]
+		}
+	]
+}
