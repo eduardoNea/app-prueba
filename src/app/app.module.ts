@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HistoryDataService } from './history-data-service'
 
 import { RouterModule,Routes} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -12,24 +13,11 @@ import { CreateComponent } from './create.component';
 const appRoutes: Routes = [
   { path: 'History-component', component: HistoryComponent },
   { path: 'Create-component', component: CreateComponent },
-
-
 ];
 @NgModule({
-  declarations: [
-    AppComponent,
-    HistoryComponent,
-    CreateComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes),
-      ReactiveFormsModule
-  ],
-  providers: [],
+  declarations: [AppComponent,HistoryComponent,CreateComponent],
+  imports: [BrowserModule,FormsModule,HttpModule,RouterModule.forRoot(appRoutes),ReactiveFormsModule],
+  providers: [HistoryDataService,HttpModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

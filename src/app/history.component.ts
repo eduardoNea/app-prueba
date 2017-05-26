@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HistoryDataService } from './history-data-service';
+import {MeetingsModel} from './Meetings-Model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class HistoryComponent {
-  label_1 = 'label_1'
+    Meetings:MeetingsModel[];
+
+constructor(private HistoryDataService:HistoryDataService) {}
+
+ngOnInit(){
+  this.HistoryDataService.getMeetings()
+    .subscribe(Meetings => this.Meetings = Meetings);
+    }
 }
